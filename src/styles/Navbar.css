@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
+nav, .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, rgba(34, 34, 34, 0.7) 0%, rgba(14, 14, 16, 1) 100%);
+    backdrop-filter: blur(14px);
+    z-index: 1000;
+    height: 56px;
+}
+
+.logocontainer {
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
+}
+.logo {
+    width: auto;
+    height: 2.2vw;
+    min-height: 28px;
+    max-height: 36px;
+    display: block;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding-right: 28px;
+}
+.navlinks a {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    padding: 6px 16px;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.navlinks a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    right: 16px;
+    height: 1px;
+    background: #e8002d;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+.navlinks a:hover {
+    color: rgba(255, 255, 255, 0.95);
+}
+.navlinks a:hover::after {
+    transform: scaleX(1);
+}
+
+.navlinks .buybtn {
+    color: #fff;
+    background: #e8002d;
+    padding: 7px 20px;
+    margin-left: 10px;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.navlinks .buybtn::after {
+    display: none;
+}
+.navlinks .buybtn:hover {
+    background: #ff1a47;
+    color: #fff;
+}
